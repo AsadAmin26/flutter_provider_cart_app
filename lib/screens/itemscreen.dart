@@ -14,35 +14,26 @@ class _ItemScreenState extends State<ItemScreen> {
   Widget build(BuildContext context) {
     return Consumer<ItemCartProvider>(
       builder:
-          (context, value, child) => Scaffold(
-            appBar: AppBar(
-              backgroundColor: Colors.lightBlueAccent,
-              title: Text(
-                'Cart',
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
-              ),
-            ),
-            body: ListView.builder(
-              itemCount: 100,
-              itemBuilder: (context, index) {
-                return ListTile(
-                  onTap: () {
-                    if (value.itemlist.contains(index)) {
-                      value.removeItem(index);
-                    } else {
-                      value.addItem(index);
-                    }
-                  },
-                  title: Text(
-                    'Item ${index + 1}',
-                    style: TextStyle(fontSize: 18),
-                  ),
-                  trailing: Icon(
-                    value.itemlist.contains(index) ? Icons.remove : Icons.add,
-                  ),
-                );
-              },
-            ),
+          (context, value, child) => ListView.builder(
+            itemCount: 100,
+            itemBuilder: (context, index) {
+              return ListTile(
+                onTap: () {
+                  if (value.itemlist.contains(index)) {
+                    value.removeItem(index);
+                  } else {
+                    value.addItem(index);
+                  }
+                },
+                title: Text(
+                  'Item ${index + 1}',
+                  style: TextStyle(fontSize: 18),
+                ),
+                trailing: Icon(
+                  value.itemlist.contains(index) ? Icons.remove : Icons.add,
+                ),
+              );
+            },
           ),
     );
   }
