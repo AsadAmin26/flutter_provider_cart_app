@@ -1,16 +1,14 @@
-# cart_app
+# Flutter Provider Cart App 🛒
 
-A new Flutter project.
+This is a simple cart management system built with **Flutter** using the **Provider** package for state management. The app demonstrates how to add, remove, and update cart items dynamically — with clean separation of UI and business logic.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## ✨ Features
 
-A few resources to get you started if this is your first Flutter project:
+- ✅ Add items to cart
+- ✅ Remove items from cart
+- ✅ Real-time UI updates using `ChangeNotifier`
+- ✅ Simple & scalable Provider architecture
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
